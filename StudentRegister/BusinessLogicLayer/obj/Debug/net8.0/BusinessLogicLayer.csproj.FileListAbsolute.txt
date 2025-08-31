@@ -1,0 +1,17 @@
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\bin\Debug\net8.0\BusinessLogicLayer.deps.json
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\bin\Debug\net8.0\BusinessLogicLayer.dll
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\bin\Debug\net8.0\BusinessLogicLayer.pdb
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\bin\Debug\net8.0\DataAccessLayer.dll
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\bin\Debug\net8.0\EntityLayer.dll
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\bin\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\bin\Debug\net8.0\EntityLayer.pdb
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\obj\Debug\net8.0\Business.450209FB.Up2Date
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.dll
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\obj\Debug\net8.0\refint\BusinessLogicLayer.dll
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.pdb
+C:\Users\Sahide\source\repos\StudentRegister\BusinessLogicLayer\obj\Debug\net8.0\ref\BusinessLogicLayer.dll

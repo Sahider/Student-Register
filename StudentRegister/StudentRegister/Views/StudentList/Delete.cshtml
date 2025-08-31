@@ -1,0 +1,49 @@
+﻿@model EntityLayer.EntityStudent
+
+<h2 style="color:#eee; font-size: 2.5rem; font-weight: 700;">Delete Student</h2>
+<p style="color:#eee; font-size: 1.3rem;">Are you sure you want to delete <strong>@Model.Name @Model.Surname</strong>?</p>
+
+<style>
+    .btn-danger {
+        background-color: #7a52a3 !important;
+        border-color: #7a52a3 !important;
+        color: white !important;
+        padding: 8px 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-danger:hover {
+        background-color: #5c3673 !important;
+        border-color: #5c3673 !important;
+        color: white !important;
+    }
+
+    .btn-secondary {
+        background-color: #6b5b7c !important;
+        border-color: #6b5b7c !important;
+        color: white !important;
+        padding: 8px 16px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        margin-left: 10px;
+    }
+
+    .btn-secondary:hover {
+        background-color: #4b3b5a !important;
+        border-color: #4b3b5a !important;
+        color: white !important;
+        text-decoration: none;
+    }
+</style>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="StudentID" />
+    <button type="submit" class="btn-delete">Delete</button>
+    <a asp-action="Index" class="btn-cancel">Cancel</a>
+</form>
+
+        @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

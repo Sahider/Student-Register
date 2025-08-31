@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "About";
+    Layout = "_Layout"; 
+}
+
+<style>
+    .about-container {
+        background-color: #5a3e99; /* Mor ton */
+        color: #f5f1ea; /* Açık krem rengi */
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 15px rgba(90, 62, 153, 0.4);
+        max-width: 900px;
+        margin: 50px auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+    }
+
+    .about-header {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .about-header span {
+        font-size: 2.8rem;
+    }
+
+    .about-subheader {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+        color: #d8c9ff;
+    }
+
+    .about-content p {
+        font-size: 1.15rem;
+        margin-bottom: 18px;
+    }
+
+    .about-footer {
+        margin-top: 35px;
+        font-style: italic;
+        color: #d0c4ff;
+        text-align: right;
+        font-size: 1.1rem;
+    }
+
+    /* Responsive */
+    @@media (max-width: 768px) {
+        .about-container {
+            padding: 20px 20px;
+            margin: 20px 15px;
+        }
+
+        .about-header {
+            font-size: 2rem;
+        }
+
+        .about-subheader {
+            font-size: 1.25rem;
+        }
+    }
+</style>
+
+<div class="about-container" role="main" aria-labelledby="aboutTitle">
+    <h1 class="about-header" id="aboutTitle">
+        <span>🎓</span> About Student Course Registration System
+    </h1>
+    <h2 class="about-subheader">Your Gateway to Easy Course Management 📚</h2>
+    <div class="about-content">
+        <p>Welcome to our <strong>Student - Course Registration System</strong>, designed to make managing courses, students, and teachers easier than ever.</p>
+        <p>Whether you're a student looking to register for courses, a teacher managing your classes, or an administrator overseeing everything, our system is tailored for you.</p>
+        <p>This project was built using <em>ASP.NET Core MVC</em> with a clean architecture approach to ensure maintainability and scalability.</p>
+        <p>We prioritize <strong>security</strong>, <strong>usability</strong>, and <strong>performance</strong> so you can focus on what matters most: learning and teaching.</p>
+    </div>
+    <div class="about-footer">
+        <p>Thank you for choosing our system! 💜</p>
+    </div>
+</div>

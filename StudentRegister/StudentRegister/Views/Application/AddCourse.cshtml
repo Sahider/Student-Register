@@ -1,0 +1,69 @@
+﻿@model EntityLayer.StudentApplicationViewModel
+
+<script>
+    function fetchStudentData() {
+        var studentId = document.getElementById("studentId").value;
+        if (studentId !== "") {
+            fetch(`/Application/GetStudentInfo/${studentId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById("studentName").value = data.name;
+                        document.getElementById("studentSurname").value = data.surname;
+                        document.getElementById("studentNumber").value = data.number;
+                    }
+                })
+                .catch(error => console.error('Error fetching student data:', error));
+        }
+    }
+</script>
+
+<h2>Add Student to Course</h2>
+
+<form method="post" asp-action="AddCourse">
+    <!-- Öğrenci Seçimi -->
+    <div class="form-group">
+        <label for="studentId">Student ID</label>
+        <select id="studentId" name="studentId" class="form-control" onchange="fetchStudentData()">
+            <option value="">Select Student</option>
+            @{
+                var students = ViewBag.Students as IEnumerable<SelectListItem>;
+                if (students != null && students.Any())
+                {
+                    foreach (var student in students)
+                    {
+                        <option value="@student.Value">@student.Text</option>
+                    }
+                }
+                else
+                {
+                    <option disabled>No students available</option>
+                }
+            }
+        </select>
+    </div>
+
+    <!-- Kurs Seçimi -->
+    <div class="form-group">
+        <label for="courseId">Select Course</label>
+        <select id="courseId" name="courseId" class="form-control">
+            <option value="">Select Course</option>
+            @{
+                var courses = ViewBag.Courses as IEnumerable<SelectListItem>;
+                if (courses != null && courses.Any())
+                {
+                    foreach (var course in courses)
+                    {
+                        <option value="@course.Value">@course.Text</option>
+                    }
+                }
+                else
+                {
+                    <option disabled>No courses available</option>
+                }
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Course</button>
+</form>

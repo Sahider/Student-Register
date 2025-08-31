@@ -1,0 +1,22 @@
+﻿@model EntityLayer.StudentApplicationViewModel
+
+<h2>Edit Student Course</h2>
+
+<form method="post" asp-action="Edit">
+    <div class="form-group">
+        <label asp-for="StudentID"></label>
+        <input asp-for="StudentID" class="form-control" readonly />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CourseID"></label>
+        <select asp-for="CourseID" class="form-control">
+            @foreach (var course in ViewBag.Courses as IEnumerable<SelectListItem>)
+            {
+                <option value="@course.Value" @@(course.Value == Model.CourseID.ToString() ? "selected" : "")>@course.Text</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>

@@ -1,0 +1,131 @@
+﻿@using Newtonsoft.Json
+@model EntityLayer.EntityCourse
+
+@{
+    ViewBag.Title = "Edit Course";
+}
+
+<h2>Edit Course</h2>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+ 
+<form asp-action="Edit" method="post" class="course-request-form">
+    <input type="hidden" asp-for="CourseID" />
+
+        <input type="hidden" asp-for="CourseName" />
+
+    <div class="form-group mb-3">
+        <label asp-for="CourseID">Select a Course</label>
+        @Html.DropDownListFor(model => model.CourseID, (SelectList)ViewBag.CoursesSelectList, "Select a Course", new { @class = "form-control", id = "CourseID", onchange = "updateCourseDetails()" })
+        <span asp-validation-for="CourseID" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="MinCapacity"></label>
+        <input asp-for="MinCapacity" id="MinCapacity" class="form-control"/>
+        <span asp-validation-for="MinCapacity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="MaxCapacity"></label>
+        <input asp-for="MaxCapacity" id="MaxCapacity" class="form-control"/>
+        <span asp-validation-for="MaxCapacity" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <a href="@Url.Action("Index", "Course")" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <script>
+        var courses = @Html.Raw(JsonConvert.SerializeObject(ViewBag.CoursesList));
+
+     function updateCourseDetails() {
+    var selectedCourseId = document.getElementById("CourseID").value;
+    console.log("Selected Course ID:", selectedCourseId);
+    console.log("Courses List:", courses);
+
+    var selectedCourse = courses.find(c => c.CourseID.toString() === selectedCourseId.toString());
+    console.log("Selected Course Object:", selectedCourse);
+
+    if (selectedCourse) {
+        document.getElementById("MinCapacity").value = selectedCourse.MinCapacity;
+        document.getElementById("MaxCapacity").value = selectedCourse.MaxCapacity;
+        document.querySelector('input[name="CourseName"]').value = selectedCourse.CourseName;
+    } else {
+        document.getElementById("MinCapacity").value = '';
+        document.getElementById("MaxCapacity").value = '';
+        document.querySelector('input[name="CourseName"]').value = '';
+    }
+}
+
+
+    window.onload = function () {
+    var selectedCourseId = parseInt(document.getElementById("CourseID").value);
+    var selectedCourse = courses.find(c => c.CourseID === selectedCourseId);
+
+    // Model’den gelen değerleri JS değişkenine aktar
+    var modelMinCapacity = @Model.MinCapacity;
+    var modelMaxCapacity = @Model.MaxCapacity;
+
+    if (selectedCourse) {
+        document.getElementById("MinCapacity").value = modelMinCapacity !== 0 ? modelMinCapacity : selectedCourse.MinCapacity;
+        document.getElementById("MaxCapacity").value = modelMaxCapacity !== 0 ? modelMaxCapacity : selectedCourse.MaxCapacity;
+    }
+};
+
+
+    </script>
+}
+
+<style>
+    .form-label {
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #eee !important;
+    }
+
+    .form-control, .form-select {
+        border: 2px solid #9c27b0;
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-size: 1.3rem;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-control:focus, .form-select:focus {
+        border-color: #6a0dad;
+        box-shadow: 0 0 6px rgba(106, 13, 173, 0.5);
+        outline: none;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+
+    .course-request-form {
+        max-width: 500px;
+        margin-top: 20px;
+    }
+</style>

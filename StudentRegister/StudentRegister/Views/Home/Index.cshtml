@@ -1,0 +1,252 @@
+﻿@model EntityLayer.EntityStudent
+
+<style>
+    .form-container {
+        max-width: 400px;
+        margin: 30px auto;
+        padding: 20px;
+        border: 1px solid #9b59b6;
+        border-radius: 10px;
+        font-family: Arial, sans-serif;
+        background-color: #f4ecf7;
+    }
+
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #6c3483;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #5b2c6f;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #9b59b6;
+        border-radius: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #8e44ad;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #732d91;
+    }
+
+    .success-message {
+        text-align: center;
+        color: #27ae60;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .navbar-toggler {
+        border: none;
+        background-color: #d7bde2;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar-toggler:hover {
+        background-color: #c39bd3 !important;
+        border-color: #c39bd3 !important;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(108,56,131,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    #passwordHelp {
+        display: none;
+        background: #f1f1f1;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        color: black;
+        font-size: 0.9em;
+    }
+</style>
+
+<div class="form-container">
+    <h2>Student Registration Form</h2>
+
+    <form asp-action="Submit" method="post" id="studentForm">
+        <div class="form-group">
+            <label>Identity:</label>
+            <input asp-for="Kimlik" id="kimlikInput" required />
+            <span asp-validation-for="Kimlik" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Name:</label>
+            <input asp-for="Name" id="nameInput" oninput="capitalizeFirstLetter(this)" required />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Surname:</label>
+            <input asp-for="Surname" id="surnameInput" oninput="capitalizeFirstLetter(this)" required />
+            <span asp-validation-for="Surname" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Number:</label>
+            <input asp-for="Number" id="numberInput" required />
+            <span asp-validation-for="Number" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>E-mail:</label>
+            <div style="display:flex; align-items:center;">
+                <input type="text" id="emailUserPart" name="EmailUserPart" required style="flex:1;" />
+                <span style="margin-left:5px; color:black;">@@lessons.com</span>
+            </div>
+
+            <input type="hidden" id="Email" name="Email" asp-for="Email" />
+
+            <small id="emailError" style="color:red; display:none; margin-top:5px;">
+                Please use English characters: ş→s, ç→c, ö→o, ğ→g, ü→u, ı→i
+            </small>
+        </div>
+
+        <div class="form-group">
+            <label>Password:</label>
+            <input asp-for="Password" id="passwordInput" type="password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+
+            <div id="passwordHelp">
+                Password must be at least 6 characters and include uppercase, lowercase, numbers, and special characters.
+            </div>
+        </div>
+
+        <button type="submit">Save</button>
+    </form>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <p class="success-message">@TempData["SuccessMessage"]</p>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <p class="text-danger">@TempData["ErrorMessage"]</p>
+    }
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" /> 
+
+    <script>
+        // Password yardım metni aç/kapa
+        const passwordInput = document.getElementById('passwordInput');
+        const passwordHelp = document.getElementById('passwordHelp');
+
+        passwordInput.addEventListener('focus', () => {
+            passwordHelp.style.display = 'block';
+        });
+
+        passwordInput.addEventListener('blur', () => {
+            passwordHelp.style.display = 'none';
+        });
+
+        // İlk harfi büyük yap, diğerleri küçük
+        function capitalizeFirstLetter(input) {
+            let value = input.value;
+            if (value.length > 0) {
+                input.value = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+            }
+        }
+
+        // Email kısmında türkçe karakter kontrolü
+        const emailUserInput = document.getElementById("emailUserPart");
+        const emailError = document.getElementById("emailError");
+
+        emailUserInput.addEventListener("input", () => {
+            const turkishChars = /[şçöğüıİŞÇÖĞÜ]/gi;
+            emailError.style.display = turkishChars.test(emailUserInput.value) ? "block" : "none";
+        });
+
+        // Form submit olunca email hidden inputuna değer yaz
+        const form = document.getElementById("studentForm");
+        const fullEmail = document.getElementById("Email");
+
+        form.addEventListener("submit", function (e) {
+            // Kimlikte sadece rakam kontrolü
+            const kimlikInput = document.getElementById("kimlikInput");
+            if (!/^[0-9]+$/.test(kimlikInput.value)) {
+                alert("Identity must contain only numbers.");
+                kimlikInput.focus();
+                e.preventDefault();
+                return;
+            }
+
+            // Name ve Surname sadece harf ve boşluk kontrolü
+            const nameInput = document.getElementById("nameInput");
+            const surnameInput = document.getElementById("surnameInput");
+            const nameRegex = /^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+$/;
+
+            if (!nameRegex.test(nameInput.value)) {
+                alert("Name must contain only letters and spaces.");
+                nameInput.focus();
+                e.preventDefault();
+                return;
+            }
+
+            if (!nameRegex.test(surnameInput.value)) {
+                alert("Surname must contain only letters and spaces.");
+                surnameInput.focus();
+                e.preventDefault();
+                return;
+            }
+
+            // Number sadece rakam kontrolü
+            const numberInput = document.getElementById("numberInput");
+            if (!/^[0-9]+$/.test(numberInput.value)) {
+                alert("Number must contain only numbers.");
+                numberInput.focus();
+                e.preventDefault();
+                return;
+            }
+
+            // E-mail hidden inputu dolduruluyor
+            fullEmail.value = emailUserInput.value.toLowerCase() + "@@lessons.com";
+        });
+
+        // Name ve Surname için sadece harf ve boşluk izin ver (yazarken filtreleme)
+        document.getElementById("nameInput").addEventListener("input", function () {
+            this.value = this.value.replace(/[^a-zA-ZğüşıöçĞÜŞİÖÇ\s]/g, '');
+        });
+
+        document.getElementById("surnameInput").addEventListener("input", function () {
+            this.value = this.value.replace(/[^a-zA-ZğüşıöçĞÜŞİÖÇ\s]/g, '');
+        });
+
+        // Number alanına sadece rakam girilebilsin
+        document.getElementById("numberInput").addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+
+        // Kimlik alanına sadece rakam girilebilsin
+        document.getElementById("kimlikInput").addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    </script>
+}

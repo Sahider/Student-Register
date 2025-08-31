@@ -1,0 +1,129 @@
+﻿@model List<EntityLayer.EntityStudent>
+
+@{
+    ViewData["Title"] = "Students";
+}
+
+<h2 class="page-title">🎓 Students List</h2>
+
+<table class="table table-hover table-bordered shadow-sm rounded custom-table">
+    <thead class="text-center custom-header">
+        <tr>
+            <th>No.</th> <!-- Sıra numarası -->
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Number</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @{
+        int sıra = 1;
+    }
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td class="text-center">@sıra</td>  <!-- Ekranda gösterilen sıra -->
+            <td class="text-center">@student.StudentID</td> <!-- Veritabanındaki gerçek ID -->
+            <td>@student.Name</td>
+            <td>@student.Surname</td>
+            <td>@student.Number</td>
+            <td>@student.Email</td>
+            <td class="text-center">
+                <a class="btn btn-outline-warning btn-sm" asp-action="Edit" asp-route-id="@student.StudentID">Update</a>
+                <a class="btn btn-outline-danger btn-sm" asp-action="Delete" asp-route-id="@student.StudentID">Delete</a>
+            </td>
+        </tr>
+        sıra++;
+    }
+    </tbody>
+</table>
+
+<style>
+    .text-purple {
+        color: #6a0dad; /* Mor tonu */
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(106, 13, 173, 0.6);
+    }
+
+    .custom-table {
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(106, 13, 173, 0.2);
+    }
+
+    /* Başlık */
+    .custom-header {
+        background: linear-gradient(45deg, #7b1fa2, #9c27b0);
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    /* Satırların alternatif renkleri */
+    .custom-table tbody tr:nth-child(odd) {
+        background-color: #f3e5f5; /* Açık mor */
+    }
+    .custom-table tbody tr:nth-child(even) {
+        background-color: #e1bee7; /* Biraz koyu mor */
+    }
+
+    /* Hover efekti */
+    .custom-table tbody tr:hover {
+        background-color: #ce93d8 !important;
+        color: #2c003e;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        cursor: pointer;
+    }
+
+    /* Hücreler */
+    .custom-table td, .custom-table th {
+        vertical-align: middle;
+        padding: 14px 18px;
+        text-align: center;
+    }
+
+    /* Buton stilleri */
+    .btn-outline-warning {
+        color: #9c27b0;
+        border-color: #9c27b0;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-outline-warning:hover {
+        background-color: #9c27b0;
+        color: white;
+    }
+
+    .btn-outline-danger {
+        color: #d32f2f;
+        border-color: #d32f2f;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-outline-danger:hover {
+        background-color: #d32f2f;
+        color: white;
+    }
+
+    .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+        border-radius: 0.2rem;
+    }
+    .page-title {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+</style>

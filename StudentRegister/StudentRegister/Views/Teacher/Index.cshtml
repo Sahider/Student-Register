@@ -1,0 +1,82 @@
+﻿@model List<EntityLayer.EntityTeacher>
+
+@{
+    ViewData["Title"] = "Teachers";
+}
+
+<h2 class="page-title">📚 Teachers List</h2>  <!-- Başlık burada -->
+
+<div class="container">
+    <table class="table table-hover table-bordered shadow-sm rounded custom-table">
+        <thead class="text-center custom-header">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>Subject</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var teacher in Model)
+            {
+                <tr>
+                    <td class="text-center">@teacher.TeacherID</td>
+                    <td>@teacher.TeacherName</td>
+                    <td>@teacher.TeacherSurname</td>
+                    <td>@teacher.TeacherEmail</td>
+                    <td>@teacher.TeacherSubject</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    /* Sayfa başlığı için stil */
+    .page-title {
+        color: white;            /* Yazı rengi beyaz */
+        font-weight: 800;        /* Kalın yazı */
+        font-size: 2rem;         /* Yazı büyüklüğü */
+        text-align: center;      /* Yazıyı ortalar */
+        margin-bottom: 30px;     /* Alt boşluk */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Hafif gölge efekti */
+    }
+
+    /* Tablo görünümü */
+    .custom-table {
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(106, 13, 173, 0.2);
+    }
+
+    .custom-header {
+        background: linear-gradient(45deg, #7b1fa2, #9c27b0);
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    .custom-table tbody tr:nth-child(odd) {
+        background-color: #f3e5f5;
+    }
+
+    .custom-table tbody tr:nth-child(even) {
+        background-color: #e1bee7;
+    }
+
+    .custom-table tbody tr:hover {
+        background-color: #ce93d8 !important;
+        color: #2c003e;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        cursor: pointer;
+    }
+
+    .custom-table td,
+    .custom-table th {
+        vertical-align: middle;
+        padding: 14px 18px;
+        text-align: center;
+    }
+</style>

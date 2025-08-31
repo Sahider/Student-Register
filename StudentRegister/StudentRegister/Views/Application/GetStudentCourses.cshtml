@@ -1,0 +1,161 @@
+﻿@model List<EntityLayer.StudentApplicationViewModel>
+
+<style>
+    body {
+        background-color: #2e2054;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        margin: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    h2::before {
+        content: "🎓";
+        font-size: 2rem;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    thead tr {
+        background: linear-gradient(90deg, #7e3a99, #5b2d80);
+        color: white;
+    }
+
+    thead th {
+        padding: 12px 15px;
+        font-weight: 700;
+        border-right: 1px solid #8349b5;
+        text-align: center;
+    }
+
+    thead th:last-child {
+        border-right: none;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #f3e3fb;
+        color: #3e2c5a;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #e1c6f1;
+        color: #3e2c5a;
+    }
+
+    tbody tr:hover {
+        background-color: #d1a8e7 !important;
+        transition: background-color 0.3s ease;
+    }
+
+    tbody td {
+        padding: 12px 15px;
+        text-align: center;
+        border-right: 1px solid #c7a7dd;
+    }
+
+    tbody td:last-child {
+        border-right: none;
+    }
+
+    /* Edit Button */
+    button.update {
+        background-color: transparent;
+        color: #6d4eae;
+        border: 2px solid #6d4eae;
+        padding: 6px 12px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-right: 6px;
+    }
+
+    button.update:hover {
+        background-color: #6d4eae;
+        color: white;
+    }
+
+    /* Delete Button */
+    button.delete {
+        background-color: transparent;
+        color: #ff4d4d;
+        border: 2px solid #ff4d4d;
+        padding: 6px 12px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button.delete:hover {
+        background-color: #ff4d4d;
+        color: white;
+    }
+
+</style>
+
+<h2>Student Courses</h2>
+
+<div class="text-right">
+    <a href="@Url.Action("AddCourse", "Application")" class="btn btn-success">Add Student to Course</a>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Number</th>
+            <th>Email</th>
+            <th>Course Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <tr>
+                <td>@(i + 1)</td>
+                <td>@Model[i].StudentID</td>
+                <td>@Model[i].StudentName</td>
+                <td>@Model[i].StudentSurname</td>
+                <td>@Model[i].StudentNumber</td>
+                <td>@Model[i].StudentMail</td>
+                <td>@Model[i].CourseName</td>
+                <td>
+                   <button class="update" onclick="window.location.href='@Url.Action("Edit", "Application", new { studentId = Model[i].StudentID })'">Edit</button>
+                   <button class="delete" onclick="if(confirm('Are you sure to delete this student from the course?')) { window.location.href='@Url.Action("Delete", "Application", new { studentId = Model[i].StudentID, courseId = Model[i].CourseID })'; }">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["Error"]
+    </div>
+}

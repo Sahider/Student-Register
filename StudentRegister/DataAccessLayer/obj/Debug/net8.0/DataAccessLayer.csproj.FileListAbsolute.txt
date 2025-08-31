@@ -1,0 +1,15 @@
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.deps.json
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.dll
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\bin\Debug\net8.0\EntityLayer.dll
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\bin\Debug\net8.0\EntityLayer.pdb
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\obj\Debug\net8.0\DataAcce.E67BD773.Up2Date
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.dll
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\Sahide\source\repos\StudentRegister\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll

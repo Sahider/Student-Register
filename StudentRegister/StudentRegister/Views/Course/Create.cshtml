@@ -1,0 +1,125 @@
+﻿@model StudentRegister.Models.CourseSelectionViewModel
+
+<h2 class="mb-4" style="color: white;">Create Course Request</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div style="color:red">@TempData["Error"]</div>
+}
+@if (TempData["Success"] != null)
+{
+    <div style="color:green">@TempData["Success"]</div>
+}
+
+<form asp-action="Create" method="post" class="course-request-form">
+    <div class="form-group mb-3">
+        <label asp-for="SelectedCourseID" class="form-label">Select a Course</label>
+        <select asp-for="SelectedCourseID" class="form-select" asp-items="@(new SelectList(Model.Courses, "CourseID", "CourseName"))" onchange="updateCourseDetails()">
+            <option value="">-- Select --</option>
+        </select>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Minimum Capacity</label>
+        <input type="number" id="MinCapacity" name="MinCapacity" class="form-control" readonly />
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Maximum Capacity</label>
+        <input type="number" id="MaxCapacity" name="MaxCapacity" class="form-control" readonly />
+    </div>
+
+    <button type="submit" class="btn btn-purple">Create Course Request</button>
+</form>
+
+@section Scripts {
+    <script>
+        function updateCourseDetails() {
+            var select = document.getElementById("SelectedCourseID");
+            var selectedOption = select.options[select.selectedIndex];
+
+            if (!selectedOption || selectedOption.value === "") {
+                document.getElementById("MinCapacity").value = "";
+                document.getElementById("MaxCapacity").value = "";
+                return;
+            }
+
+            // Find data-min and data-max attributes from option element
+            var min = selectedOption.getAttribute("data-min");
+            var max = selectedOption.getAttribute("data-max");
+
+            // If attributes not found, fallback to 0 or empty
+            document.getElementById("MinCapacity").value = min || "";
+            document.getElementById("MaxCapacity").value = max || "";
+        }
+
+        window.onload = function () {
+            // Add data attributes to options dynamically on load
+            var select = document.getElementById("SelectedCourseID");
+            var courses = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Courses));
+            for (var i = 0; i < select.options.length; i++) {
+                var option = select.options[i];
+                var course = courses.find(c => c.CourseID == option.value);
+                if (course) {
+                    option.setAttribute("data-min", course.MinCapacity);
+                    option.setAttribute("data-max", course.MaxCapacity);
+                }
+            }
+            updateCourseDetails();
+        };
+    </script>
+}
+
+<style>
+    .form-label {
+        font-weight: 600;
+        color: white !important;
+    }
+
+    .form-control, .form-select {
+        border: 2px solid #9c27b0;
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+        color: white;
+        background-color: #2a1a4a;
+    }
+
+    .form-control::placeholder {
+        color: white !important;
+        opacity: 0.8;
+    }
+
+    .form-control:focus, .form-select:focus {
+        border-color: #6a0dad;
+        box-shadow: 0 0 6px rgba(106, 13, 173, 0.5);
+        outline: none;
+    }
+
+    .form-control[readonly] {
+        background-color: #2a1a4a;
+        color: white;
+        opacity: 1;
+    }
+
+    .btn-purple:hover {
+        background-color: #7b1fa2;
+    }
+
+    .btn-purple {
+        background-color: #9c27b0;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .course-request-form {
+        max-width: 500px;
+        margin-top: 20px;
+    }
+</style>

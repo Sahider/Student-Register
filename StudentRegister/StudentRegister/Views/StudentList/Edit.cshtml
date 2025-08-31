@@ -1,0 +1,140 @@
+﻿@model EntityLayer.EntityStudent
+
+<h2 style="color:#6a4c93;">Update Student</h2>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+<style>
+    /* Stil ayarları */
+    body {
+        background-color: #faf6fc;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #4b2c72;
+    }
+    label {
+        font-weight: 600;
+        color: #5a3d7c;
+    }
+    .form-control {
+        border: 1px solid #a78bcc;
+        background-color: #f4ecf7;
+        color: #3a1f6e;
+    }
+    .form-control:focus {
+        border-color: #6a4c93;
+        background-color: #e9e1f0;
+        box-shadow: none;
+    }
+    .btn-update {
+        background-color: #7a52a3;
+        color: white;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn-update:hover {
+        background-color: #5c3673;
+    }
+    .btn-cancel {
+        background-color: #c94b7c;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+    .btn-cancel:hover {
+        background-color: #972f5b;
+    }
+    form {
+        max-width: 600px;
+        margin-top: 20px;
+        background-color: #f9f5fc;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(106, 76, 147, 0.2);
+    }
+</style>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="StudentID" />
+
+    <div class="form-group">
+        <label asp-for="Kimlik"></label>
+        <input asp-for="Kimlik" class="form-control" readonly />
+        <span asp-validation-for="Kimlik" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control only-letters" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Surname"></label>
+        <input asp-for="Surname" class="form-control only-letters" />
+        <span asp-validation-for="Surname" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Number"></label>
+        <input asp-for="Number" class="form-control" />
+        <span asp-validation-for="Number" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <input asp-for="Password" type="hidden" />
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        // Harf ve boşluk dışındaki karakterleri engelle
+        document.querySelectorAll('.only-letters').forEach(function (input) {
+            input.addEventListener('input', function () {
+                this.value = this.value.replace(/[^a-zA-ZğüşıöçĞÜŞİÖÇ\s]/g, '');
+            });
+        });
+    </script>
+
+    <script>
+        // Sadece rakamlar için Number alanını kontrol et
+        document.querySelector('input[name="Number"]').addEventListener('input', function () {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    </script>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Formu otomatik gönderme
+            console.log('Form Submitted');
+            
+            // Verilerin AJAX ile gönderilmesi veya normal form gönderimi yapılabilir.
+            // Burada formun otomatik gönderilmesini sağlamak için aşağıdaki satırı ekliyoruz
+            event.target.submit();
+        }
+    </script>
+}
