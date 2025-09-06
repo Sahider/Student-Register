@@ -14,15 +14,13 @@ public static class BLLApplication
     // Öğrenciye ders ekler
     public static int AddApplication(int studentId, int courseId)
     {
-        // Öğrencinin veritabanında olup olmadığını kontrol et
-        var studentExists = DataALStudent.GetStudentById(studentId); // Burada öğrenci ID'sine göre öğrenci arıyoruz
+        var studentExists = DataALStudent.GetStudentById(studentId);
 
         if (studentExists == null)
         {
             return 0; // Öğrenci bulunamadı
         }
 
-        // Öğrenci zaten bu derse kayıtlı mı, kontrol et
         var existingApplication = DataALApplication.GetStudentApplications()
             .FirstOrDefault(a => a.StudentID == studentId && a.CourseID == courseId);
 
@@ -31,37 +29,44 @@ public static class BLLApplication
             return 0; // Öğrenci zaten bu derse kayıtlı
         }
 
-        // Yeni öğrenci-kurs kaydını ekle
         return DataALApplication.AddStudentCourse(studentId, courseId);
     }
 
     // Öğrenci ve ders bilgisini günceller
     public static int UpdateApplication(int studentId, int courseId)
     {
-        return DataALApplication.UpdateStudentCourse(studentId, courseId); // Veritabanında güncelleme
+        return DataALApplication.UpdateStudentCourse(studentId, courseId);
     }
 
     // Öğrenci ve ders bilgisini siler
     public static int DeleteApplication(int studentId, int courseId)
     {
-        return DataALApplication.DeleteStudentCourse(studentId, courseId);  // Öğrenci ve ders ilişkisini sil
+        return DataALApplication.DeleteStudentCourse(studentId, courseId);
     }
 
     // Dersleri almak için yeni metot
     public static List<EntityCourse> GetCourses()
     {
-        return DataALCourse.CourseList(); // DataALCourse sınıfını çağırıyoruz
+        return DataALCourse.CourseList();
     }
 
     // Öğrencileri getir
     public static List<EntityStudent> GetStudents()
     {
-        return DataALStudent.GetStudentList(); // Öğrencileri veritabanından çeker
+        return DataALStudent.GetStudentList();
     }
 
     // Öğrenciyi ID ile alır
     public static EntityStudent GetStudentById(int studentId)
     {
-        return DataALStudent.GetStudentById(studentId); // Öğrenciyi ID ile getir
+        return DataALStudent.GetStudentById(studentId);
+    }
+
+    // Öğrencinin mevcut derslerini alır
+    public static List<StudentApplicationViewModel> GetStudentCoursesByStudentId(int studentId)
+    {
+        return DataALApplication.GetStudentApplications()
+            .Where(a => a.StudentID == studentId)
+            .ToList();
     }
 }

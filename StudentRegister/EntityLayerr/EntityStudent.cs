@@ -34,7 +34,7 @@ namespace EntityLayer
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$",
             ErrorMessage = "Password must be at least 6 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.")]
         public string Password { get; set; }
-
+      
     }
 }
 

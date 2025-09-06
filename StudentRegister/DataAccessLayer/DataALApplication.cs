@@ -18,7 +18,7 @@ public static class DataALApplication
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(@"
-                    SELECT A.StudentID, S.StudentName, S.StudentSurname, S.StudentNumber, S.StudentMail, C.CourseName
+                    SELECT A.StudentID, S.StudentName, S.StudentSurname, S.StudentNumber, S.StudentMail, C.CourseName, C.CourseID
                     FROM TBLAPPLICATION A
                     INNER JOIN TBLSTUDENT S ON A.StudentID = S.StudentID
                     INNER JOIN TBLCOURSE C ON A.CourseID = C.CourseID", connection);
@@ -32,9 +32,11 @@ public static class DataALApplication
                         StudentID = Convert.ToInt32(reader["StudentID"]),
                         StudentName = reader["StudentName"].ToString(),
                         StudentSurname = reader["StudentSurname"].ToString(),
-                        StudentNumber = reader.GetInt32(reader.GetOrdinal("StudentNumber")),
+                        StudentNumber = reader["StudentNumber"].ToString(),
                         StudentMail = reader["StudentMail"].ToString(),
-                        CourseName = reader["CourseName"].ToString()
+                        CourseName = reader["CourseName"].ToString(),
+                         CourseID = Convert.ToInt32(reader["CourseID"])
+
                     });
                 }
 

@@ -1,5 +1,5 @@
-﻿using BusinessLogicLayer;  // BLLApplication için
-using EntityLayer; // Entity modellerini kullanmak için
+﻿using BusinessLogicLayer;
+using EntityLayer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
@@ -9,84 +9,74 @@ public class ApplicationController : Controller
     // Öğrenci ve ders ilişkilerini getir
     public IActionResult StudentCourses()
     {
-        var applications = BLLApplication.GetApplications();  // BLL'den öğrenci-ders ilişkilerini alıyoruz
-        return View("GetStudentCourses", applications);  // Görünüm doğru olmalı
+        var applications = BLLApplication.GetApplications();
+        return View("GetStudentCourses", applications);
     }
 
-    // Yeni öğrenciye ders eklemek için sayfa (GET)
+    // Öğrenciye yeni ders eklemek için sayfa (GET)
     [HttpGet]
-    public IActionResult AddCourse()
+    public IActionResult Edit(int studentId)
     {
-        // Öğrencileri ve kursları alıyoruz
-        var students = BLLApplication.GetStudents();
-        var courses = BLLApplication.GetCourses();
+        var student = BLLApplication.GetStudentById(studentId);
+        if (student == null)
+        {
+            return NotFound();
+        }
 
-        // Eğer öğrenci verisi varsa, ViewBag'e atıyoruz
-        ViewBag.Students = students != null && students.Any()
-            ? new SelectList(students, "StudentID", "StudentName")
-            : new SelectList(Enumerable.Empty<SelectListItem>());
 
-        // Eğer kurs verisi varsa, ViewBag'e atıyoruz
-        ViewBag.Courses = courses != null && courses.Any()
-            ? new SelectList(courses, "CourseID", "CourseName")
-            : new SelectList(Enumerable.Empty<SelectListItem>());
+        var model = new StudentApplicationViewModel
+        {
+            StudentID = student.StudentID,
+            StudentName = student.Name,        
+            StudentSurname = student.Surname,  
+            StudentNumber = student.Number,    
+            StudentMail = student.Email        
+        };
 
-        return View();
+
+        ViewBag.Courses = new SelectList(BLLApplication.GetCourses(), "CourseID", "CourseName");
+
+        return View(model);
     }
 
+
+    // Öğrenciye yeni ders ekle (POST)
     [HttpPost]
-    public IActionResult AddCourse(int studentId, int courseId)
+    public IActionResult Edit(int studentId, int courseId)
     {
         var result = BLLApplication.AddApplication(studentId, courseId);
 
         if (result > 0)
         {
-            TempData["Success"] = "Course successfully added!";
+            TempData["Success"] = "Course successfully added to the student!";
+            return RedirectToAction("StudentCourses");
         }
-        else
+
+        TempData["Error"] = "This course is already assigned to the student.";
+
+        var student = BLLApplication.GetStudentById(studentId);
+        var model = new StudentApplicationViewModel
         {
-            TempData["Error"] = "An error occurred while adding the course.";
-        }
+            StudentID = student.StudentID,
+            StudentName = student.Name,
+            StudentSurname = student.Surname,
+            StudentNumber = student.Number,
+            StudentMail = student.Email
+        };
 
-        return RedirectToAction("StudentCourses");
-    }
-
-    // Edit GET metodu: Ders bilgilerini ve öğrenci bilgilerini almak için
-    [HttpGet]
-    public IActionResult Edit(int studentId)
-    {
-        var student = BLLApplication.GetStudentById(studentId); // Öğrenciyi ID ile getiriyoruz
-        if (student == null)
-        {
-            return NotFound();  // Eğer öğrenci bulunamazsa, 404 döndürüyoruz
-        }
-
-        // Dersleri ViewBag'e ekliyoruz
         ViewBag.Courses = new SelectList(BLLApplication.GetCourses(), "CourseID", "CourseName");
+        var studentCourses = BLLApplication.GetStudentCoursesByStudentId(studentId);
+        ViewBag.StudentCourses = studentCourses;
 
-        return View(student);  // Öğrenci ve ders bilgilerini gönderiyoruz
+        return View(model); 
     }
 
-    // Edit POST metodu: Öğrenci ve ders bilgisini güncellemek için
-    [HttpPost]
-    public IActionResult Edit(int studentId, int courseId)
-    {
-        var result = BLLApplication.UpdateApplication(studentId, courseId);  // Öğrenci ve ders bilgilerini güncelleme işlemi
-
-        if (result > 0)
-        {
-            TempData["Success"] = "Student's course updated successfully!";
-            return RedirectToAction("StudentCourses");  // Sayfayı tekrar yükler
-        }
-
-        TempData["Error"] = "An error occurred while updating the student's course.";
-        return View();
-    }
 
     // Delete metodu: Öğrenci-ders ilişkisinin silinmesi
-    public IActionResult Delete(int studentId, int courseId)
+    [HttpPost, ActionName("Delete")]
+    public IActionResult DeletePost(int studentId, int courseId)
     {
-        var result = BLLApplication.DeleteApplication(studentId, courseId);  // Öğrenci ve ders ilişkisini sil
+        var result = BLLApplication.DeleteApplication(studentId, courseId);
 
         if (result > 0)
         {
@@ -94,9 +84,95 @@ public class ApplicationController : Controller
         }
         else
         {
-            TempData["Error"] = "An error occurred while deleting the student course.";
+            TempData["Error"] = "An error occurred while deleting the course.";
         }
 
-        return RedirectToAction("StudentCourses");  // Sayfayı tekrar yükler
+        return RedirectToAction("StudentCourses");
     }
+
+    [HttpGet]
+    public IActionResult Delete(int studentId, int courseId)
+    {
+        var studentCourses = BLLApplication.GetStudentCoursesByStudentId(studentId);
+        var model = studentCourses.FirstOrDefault(x => x.CourseID == courseId);
+
+        if (model == null)
+        {
+            return NotFound();
+        }
+
+        return View(model); 
+    }
+    // GET: AddCourse sayfasını göster (öğrenciler + dersler dropdown listesi)
+    [HttpGet]
+    public IActionResult AddCourse()
+    {
+        var students = BLLApplication.GetStudents()
+                      .Select(s => new { s.StudentID, FullName = $"{s.Name} {s.Surname}" })
+                      .ToList();
+
+        ViewBag.Students = new SelectList(students, "StudentID", "FullName");
+        ViewBag.Courses = new SelectList(BLLApplication.GetCourses(), "CourseID", "CourseName");
+        return View();
+    }
+
+
+    // POST: Öğrenciye ders ekle
+    [HttpPost]
+    public IActionResult AddCourse(int studentId, int courseId)
+    {
+        var result = BLLApplication.AddApplication(studentId, courseId);
+
+        if (result > 0)
+        {
+            TempData["Success"] = "Course successfully added to the student!";
+            return RedirectToAction("StudentCourses");
+        }
+
+        TempData["Error"] = "This course is already assigned to the student.";
+
+        var students = BLLApplication.GetStudents()
+                      .Select(s => new { s.StudentID, FullName = $"{s.Name} {s.Surname}" })
+                      .ToList();
+
+        ViewBag.Students = new SelectList(students, "StudentID", "FullName", studentId);
+        ViewBag.Courses = new SelectList(BLLApplication.GetCourses(), "CourseID", "CourseName", courseId);
+
+        return View();
+    }
+
+
+    [HttpGet]
+    public JsonResult GetStudentInfo(int studentId)
+    {
+        var student = BLLApplication.GetStudentById(studentId);
+        if (student == null)
+        {
+            return Json(new { success = false });
+        }
+
+        return Json(new
+        {
+            success = true,
+            name = student.Name,
+            surname = student.Surname,
+            number = student.Number
+        });
+    }
+
+    [HttpGet]
+    public JsonResult GetStudentCourses(int studentId)
+    {
+        var courses = BLLApplication.GetStudentCoursesByStudentId(studentId);
+        if (courses == null || !courses.Any())
+        {
+            return Json(new { success = false, courses = new string[0] });
+        }
+
+        var courseNames = courses.Select(c => c.CourseName).ToArray();
+
+        return Json(new { success = true, courses = courseNames });
+    }
+
+
 }

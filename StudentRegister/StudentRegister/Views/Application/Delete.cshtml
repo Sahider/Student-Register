@@ -7,7 +7,10 @@
     <p><strong>Course:</strong> @Model.CourseName</p>
 </div>
 
-<form method="post">
+<form method="post" asp-action="Delete">
+    <input type="hidden" name="studentId" value="@Model.StudentID" />
+    <input type="hidden" name="courseId" value="@Model.CourseID" />
     <button type="submit" class="btn btn-danger">Delete</button>
     <a href="@Url.Action("StudentCourses")" class="btn btn-secondary">Cancel</a>
 </form>
+

@@ -1,69 +1,114 @@
 ﻿@model EntityLayer.StudentApplicationViewModel
 
 <script>
-    function fetchStudentData() {
-        var studentId = document.getElementById("studentId").value;
-        if (studentId !== "") {
-            fetch(`/Application/GetStudentInfo/${studentId}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        document.getElementById("studentName").value = data.name;
-                        document.getElementById("studentSurname").value = data.surname;
-                        document.getElementById("studentNumber").value = data.number;
-                    }
-                })
-                .catch(error => console.error('Error fetching student data:', error));
-        }
+   function fetchStudentData() {
+    var studentId = document.getElementById("studentId").value;
+    if (studentId !== "") {
+        fetch(`/Application/GetStudentInfo?studentId=${studentId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById("studentName").value = data.name;
+                    document.getElementById("studentSurname").value = data.surname;
+                    document.getElementById("studentNumber").value = data.number;
+                } else {
+                    alert("Student data not found.");
+                    clearStudentFields();
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching student data:', error);
+                clearStudentFields();
+            });
+
+        // Yeni: Mevcut dersleri getir
+        fetch(`/Application/GetStudentCourses?studentId=${studentId}`)
+            .then(response => response.json())
+            .then(data => {
+                const coursesDiv = document.getElementById("studentCoursesList");
+                if (data.success && data.courses.length > 0) {
+                    coursesDiv.innerHTML = "<strong>Current Courses:</strong><ul>" + data.courses.map(c => `<li>${c}</li>`).join('') + "</ul>";
+                } else {
+                    coursesDiv.innerHTML = "<strong>Current Courses:</strong> None";
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching student courses:', error);
+                document.getElementById("studentCoursesList").innerHTML = "";
+            });
+
+    } else {
+        clearStudentFields();
+        document.getElementById("studentCoursesList").innerHTML = "";
+    }
+}
+
+
+    function clearStudentFields() {
+        document.getElementById("studentName").value = "";
+        document.getElementById("studentSurname").value = "";
+        document.getElementById("studentNumber").value = "";
     }
 </script>
 
 <h2>Add Student to Course</h2>
 
 <form method="post" asp-action="AddCourse">
-    <!-- Öğrenci Seçimi -->
     <div class="form-group">
-        <label for="studentId">Student ID</label>
-        <select id="studentId" name="studentId" class="form-control" onchange="fetchStudentData()">
+        <label for="studentId">Student</label>
+        <select id="studentId" name="studentId" class="form-control" onchange="fetchStudentData()" required>
             <option value="">Select Student</option>
-            @{
-                var students = ViewBag.Students as IEnumerable<SelectListItem>;
-                if (students != null && students.Any())
-                {
-                    foreach (var student in students)
-                    {
-                        <option value="@student.Value">@student.Text</option>
-                    }
-                }
-                else
-                {
-                    <option disabled>No students available</option>
-                }
+            @foreach (var student in ViewBag.Students as IEnumerable<SelectListItem>)
+            {
+                <option value="@student.Value">@student.Text</option>
             }
         </select>
     </div>
 
-    <!-- Kurs Seçimi -->
     <div class="form-group">
-        <label for="courseId">Select Course</label>
-        <select id="courseId" name="courseId" class="form-control">
-            <option value="">Select Course</option>
-            @{
-                var courses = ViewBag.Courses as IEnumerable<SelectListItem>;
-                if (courses != null && courses.Any())
-                {
-                    foreach (var course in courses)
-                    {
-                        <option value="@course.Value">@course.Text</option>
-                    }
-                }
-                else
-                {
-                    <option disabled>No courses available</option>
-                }
-            }
-        </select>
+        <label for="studentName">Name</label>
+        <input id="studentName" name="studentName" type="text" class="form-control" readonly />
     </div>
+
+    <div class="form-group">
+        <label for="studentSurname">Surname</label>
+        <input id="studentSurname" name="studentSurname" type="text" class="form-control" readonly />
+    </div>
+
+    <div class="form-group">
+        <label for="studentNumber">Number</label>
+        <input id="studentNumber" name="studentNumber" type="text" class="form-control" readonly />
+    </div>
+
+  <div class="form-group">
+    <label for="courseId">Select Course</label>
+    <select id="courseId" name="courseId" class="form-control" required>
+        <option value="">Select Course</option>
+        @foreach (var course in ViewBag.Courses as IEnumerable<SelectListItem>)
+        {
+            <option value="@course.Value">@course.Text</option>
+        }
+    </select>
+</div>
+
+<div id="studentCoursesList" style="margin-top: 15px;">
+    <!-- Mevcut dersler burada görünecek -->
+</div>
+
 
     <button type="submit" class="btn btn-primary">Add Course</button>
 </form>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger mt-3">
+        @TempData["Error"]
+    </div>
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success mt-3">
+        @TempData["Success"]
+    </div>
+}

@@ -3,6 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\views\\application\\addcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\views\\application\\addcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\views\\application\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\views\\application\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C44E3EC-2AC3-4138-ABC4-6E70B237F8B3}|DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\dataaccesslayer\\dataalapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C44E3EC-2AC3-4138-ABC4-6E70B237F8B3}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataalapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19E779E2-D6A2-4DA1-8AF6-551D24617B0C}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\businesslogiclayer\\bllapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19E779E2-D6A2-4DA1-8AF6-551D24617B0C}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\bllapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F03CBB28-29EA-43AB-8D64-BBB041A48DE8}|EntityLayerr\\EntityLayer.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\entitylayerr\\studentapplicationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F03CBB28-29EA-43AB-8D64-BBB041A48DE8}|EntityLayerr\\EntityLayer.csproj|solutionrelative:entitylayerr\\studentapplicationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\views\\application\\getstudentcourses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\views\\application\\getstudentcourses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\views\\application\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\views\\application\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F03CBB28-29EA-43AB-8D64-BBB041A48DE8}|EntityLayerr\\EntityLayer.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\entitylayerr\\entitystudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F03CBB28-29EA-43AB-8D64-BBB041A48DE8}|EntityLayerr\\EntityLayer.csproj|solutionrelative:entitylayerr\\entitystudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -31,44 +71,12 @@
       "RelativeMoniker": "D:0:0:{19E779E2-D6A2-4DA1-8AF6-551D24617B0C}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\bllstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F03CBB28-29EA-43AB-8D64-BBB041A48DE8}|EntityLayerr\\EntityLayer.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\entitylayerr\\entitystudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F03CBB28-29EA-43AB-8D64-BBB041A48DE8}|EntityLayerr\\EntityLayer.csproj|solutionrelative:entitylayerr\\entitystudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C44E3EC-2AC3-4138-ABC4-6E70B237F8B3}|DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\dataaccesslayer\\dataalapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C44E3EC-2AC3-4138-ABC4-6E70B237F8B3}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataalapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F03CBB28-29EA-43AB-8D64-BBB041A48DE8}|EntityLayerr\\EntityLayer.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\entitylayerr\\studentapplicationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F03CBB28-29EA-43AB-8D64-BBB041A48DE8}|EntityLayerr\\EntityLayer.csproj|solutionrelative:entitylayerr\\studentapplicationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\views\\application\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\views\\application\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\views\\application\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\views\\application\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\views\\home\\studentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\views\\home\\studentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\views\\studentlist\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\views\\studentlist\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\views\\application\\getstudentcourses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\views\\application\\getstudentcourses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\views\\application\\studentcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -85,14 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\studentregister\\views\\application\\addcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77C62A9B-2853-4C52-8DC9-9FBFCF9C59DF}|StudentRegister\\StudentRegister.csproj|solutionrelative:studentregister\\views\\application\\addcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19E779E2-D6A2-4DA1-8AF6-551D24617B0C}|BusinessLogicLayer\\BusinessLogicLayer.csproj|c:\\users\\sahide\\source\\repos\\studentregister\\businesslogiclayer\\bllapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19E779E2-D6A2-4DA1-8AF6-551D24617B0C}|BusinessLogicLayer\\BusinessLogicLayer.csproj|solutionrelative:businesslogiclayer\\bllapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,24 +102,132 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\StudentList\\Edit.cshtml",
-              "RelativeDocumentMoniker": "StudentRegister\\Views\\StudentList\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\StudentList\\Edit.cshtml",
-              "RelativeToolTip": "StudentRegister\\Views\\StudentList\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-30T14:42:37.369Z",
+              "DocumentIndex": 0,
+              "Title": "ApplicationController.cs",
+              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Controllers\\ApplicationController.cs",
+              "RelativeDocumentMoniker": "StudentRegister\\Controllers\\ApplicationController.cs",
+              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Controllers\\ApplicationController.cs",
+              "RelativeToolTip": "StudentRegister\\Controllers\\ApplicationController.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAgwKAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T12:39:59.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\Edit.cshtml",
+              "RelativeDocumentMoniker": "StudentRegister\\Views\\Application\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\Edit.cshtml",
+              "RelativeToolTip": "StudentRegister\\Views\\Application\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-30T13:55:09.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddCourse.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\AddCourse.cshtml",
+              "RelativeDocumentMoniker": "StudentRegister\\Views\\Application\\AddCourse.cshtml",
+              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\AddCourse.cshtml",
+              "RelativeToolTip": "StudentRegister\\Views\\Application\\AddCourse.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAcwGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-30T14:18:05.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataALApplication.cs",
+              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\DataAccessLayer\\DataALApplication.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataALApplication.cs",
+              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\DataAccessLayer\\DataALApplication.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataALApplication.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAmwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T18:49:49.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentApplicationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\EntityLayerr\\StudentApplicationViewModel.cs",
+              "RelativeDocumentMoniker": "EntityLayerr\\StudentApplicationViewModel.cs",
+              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\EntityLayerr\\StudentApplicationViewModel.cs",
+              "RelativeToolTip": "EntityLayerr\\StudentApplicationViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:32:12.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BLLApplication.cs",
+              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\BusinessLogicLayer\\BLLApplication.cs",
+              "RelativeDocumentMoniker": "BusinessLogicLayer\\BLLApplication.cs",
+              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\BusinessLogicLayer\\BLLApplication.cs",
+              "RelativeToolTip": "BusinessLogicLayer\\BLLApplication.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T13:55:59.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetStudentCourses.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\GetStudentCourses.cshtml",
+              "RelativeDocumentMoniker": "StudentRegister\\Views\\Application\\GetStudentCourses.cshtml",
+              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\GetStudentCourses.cshtml",
+              "RelativeToolTip": "StudentRegister\\Views\\Application\\GetStudentCourses.cshtml",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAKEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-30T13:55:12.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\Delete.cshtml",
+              "RelativeDocumentMoniker": "StudentRegister\\Views\\Application\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\Delete.cshtml",
+              "RelativeToolTip": "StudentRegister\\Views\\Application\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-30T14:01:42.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "StudentRegister\\Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "StudentRegister\\Controllers\\CourseController.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T17:44:12.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EntityStudent.cs",
+              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\EntityLayerr\\EntityStudent.cs",
+              "RelativeDocumentMoniker": "EntityLayerr\\EntityStudent.cs",
+              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\EntityLayerr\\EntityStudent.cs",
+              "RelativeToolTip": "EntityLayerr\\EntityStudent.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwCQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:00:18.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "StudentRegister\\Views\\Home\\Index.cshtml",
@@ -127,12 +235,11 @@
               "RelativeToolTip": "StudentRegister\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAGIAAAAAAAAAAAAMwH8AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-30T17:08:56.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T17:08:56.427Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "StudentRegister\\Controllers\\HomeController.cs",
@@ -140,12 +247,23 @@
               "RelativeToolTip": "StudentRegister\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAJkAAAAAAAAAAAAqwGsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T17:03:30.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T17:03:30.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\StudentList\\Edit.cshtml",
+              "RelativeDocumentMoniker": "StudentRegister\\Views\\StudentList\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\StudentList\\Edit.cshtml",
+              "RelativeToolTip": "StudentRegister\\Views\\StudentList\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-30T14:42:37.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "StudentListController.cs",
               "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Controllers\\StudentListController.cs",
               "RelativeDocumentMoniker": "StudentRegister\\Controllers\\StudentListController.cs",
@@ -153,12 +271,11 @@
               "RelativeToolTip": "StudentRegister\\Controllers\\StudentListController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T14:43:48.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T14:43:48.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\StudentList\\Index.cshtml",
               "RelativeDocumentMoniker": "StudentRegister\\Views\\StudentList\\Index.cshtml",
@@ -166,12 +283,11 @@
               "RelativeToolTip": "StudentRegister\\Views\\StudentList\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-30T18:02:58.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T18:02:58.128Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "BLLStudent.cs",
               "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\BusinessLogicLayer\\BLLStudent.cs",
               "RelativeDocumentMoniker": "BusinessLogicLayer\\BLLStudent.cs",
@@ -183,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "DataALStudent.cs",
               "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\DataAccessLayer\\DataALStudent.cs",
               "RelativeDocumentMoniker": "DataAccessLayer\\DataALStudent.cs",
@@ -195,91 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EntityStudent.cs",
-              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\EntityLayerr\\EntityStudent.cs",
-              "RelativeDocumentMoniker": "EntityLayerr\\EntityStudent.cs",
-              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\EntityLayerr\\EntityStudent.cs",
-              "RelativeToolTip": "EntityLayerr\\EntityStudent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T14:00:18.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ApplicationController.cs",
-              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Controllers\\ApplicationController.cs",
-              "RelativeDocumentMoniker": "StudentRegister\\Controllers\\ApplicationController.cs",
-              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Controllers\\ApplicationController.cs",
-              "RelativeToolTip": "StudentRegister\\Controllers\\ApplicationController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAnwEAAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T12:39:59.235Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DataALApplication.cs",
-              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\DataAccessLayer\\DataALApplication.cs",
-              "RelativeDocumentMoniker": "DataAccessLayer\\DataALApplication.cs",
-              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\DataAccessLayer\\DataALApplication.cs",
-              "RelativeToolTip": "DataAccessLayer\\DataALApplication.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAACIAAABcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T18:49:49.478Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "StudentApplicationViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\EntityLayerr\\StudentApplicationViewModel.cs",
-              "RelativeDocumentMoniker": "EntityLayerr\\StudentApplicationViewModel.cs",
-              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\EntityLayerr\\StudentApplicationViewModel.cs",
-              "RelativeToolTip": "EntityLayerr\\StudentApplicationViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T14:32:12.654Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CourseController.cs",
-              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Controllers\\CourseController.cs",
-              "RelativeDocumentMoniker": "StudentRegister\\Controllers\\CourseController.cs",
-              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Controllers\\CourseController.cs",
-              "RelativeToolTip": "StudentRegister\\Controllers\\CourseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T17:44:12.718Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\Edit.cshtml",
-              "RelativeDocumentMoniker": "StudentRegister\\Views\\Application\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\Edit.cshtml",
-              "RelativeToolTip": "StudentRegister\\Views\\Application\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-30T13:55:09.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\Delete.cshtml",
-              "RelativeDocumentMoniker": "StudentRegister\\Views\\Application\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\Delete.cshtml",
-              "RelativeToolTip": "StudentRegister\\Views\\Application\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-30T14:01:42.497Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "StudentList.cshtml",
               "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Home\\StudentList.cshtml",
               "RelativeDocumentMoniker": "StudentRegister\\Views\\Home\\StudentList.cshtml",
@@ -291,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\StudentList\\Delete.cshtml",
               "RelativeDocumentMoniker": "StudentRegister\\Views\\StudentList\\Delete.cshtml",
@@ -303,19 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "GetStudentCourses.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\GetStudentCourses.cshtml",
-              "RelativeDocumentMoniker": "StudentRegister\\Views\\Application\\GetStudentCourses.cshtml",
-              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\GetStudentCourses.cshtml",
-              "RelativeToolTip": "StudentRegister\\Views\\Application\\GetStudentCourses.cshtml",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAowJMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-30T13:55:12.8Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "StudentCourse.cshtml",
               "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\StudentCourse.cshtml",
               "RelativeDocumentMoniker": "StudentRegister\\Views\\Application\\StudentCourse.cshtml",
@@ -327,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Program.cs",
               "RelativeDocumentMoniker": "StudentRegister\\Program.cs",
@@ -339,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "StudentRegister\\Views\\Home\\Privacy.cshtml",
@@ -351,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "TeacherController.cs",
               "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Controllers\\TeacherController.cs",
               "RelativeDocumentMoniker": "StudentRegister\\Controllers\\TeacherController.cs",
@@ -360,30 +380,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-30T16:30:30.341Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AddCourse.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\AddCourse.cshtml",
-              "RelativeDocumentMoniker": "StudentRegister\\Views\\Application\\AddCourse.cshtml",
-              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\StudentRegister\\Views\\Application\\AddCourse.cshtml",
-              "RelativeToolTip": "StudentRegister\\Views\\Application\\AddCourse.cshtml",
-              "ViewState": "AgIAACIAAAAAAAAAAAAiwEUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-30T14:18:05.525Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "BLLApplication.cs",
-              "DocumentMoniker": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\BusinessLogicLayer\\BLLApplication.cs",
-              "RelativeDocumentMoniker": "BusinessLogicLayer\\BLLApplication.cs",
-              "ToolTip": "C:\\Users\\Sahide\\source\\repos\\StudentRegister\\BusinessLogicLayer\\BLLApplication.cs",
-              "RelativeToolTip": "BusinessLogicLayer\\BLLApplication.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T13:55:59.825Z"
             }
           ]
         }
